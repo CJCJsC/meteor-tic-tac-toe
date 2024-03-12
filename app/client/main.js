@@ -1,6 +1,10 @@
-// Start the app.
-import '../imports/startup/client/Startup';
-// Import the Bootstrap css.
-import 'bootstrap/dist/css/bootstrap.min.css';
-// Override the default bootstrap styles.
-import './style.css';
+// client/main.js or client/main.jsx
+
+import { Meteor } from 'meteor/meteor';
+import React from 'react';
+import { render } from 'react-dom';
+import App from '../imports/ui/App';
+
+Meteor.startup(() => {
+  render(<App />, document.getElementById('root'));
+});
